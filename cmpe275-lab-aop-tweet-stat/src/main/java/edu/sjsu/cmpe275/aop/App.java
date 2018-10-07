@@ -9,7 +9,7 @@ public class App {
          * You may make changes to suit your need, but this file is NOT part of the submission.
          */
 
-    	ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("context.xml");
+    		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("context.xml");
         TweetService tweeter = (TweetService) ctx.getBean("tweetService");
         TweetStats stats = (TweetStats) ctx.getBean("tweetStats");
 
@@ -20,7 +20,6 @@ public class App {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         System.out.println("Most productive user: " + stats.getMostProductiveUser());
         System.out.println("Most popular user: " + stats.getMostFollowedUser());
         System.out.println("Length of the longest tweet: " + stats.getLengthOfLongestTweet());
