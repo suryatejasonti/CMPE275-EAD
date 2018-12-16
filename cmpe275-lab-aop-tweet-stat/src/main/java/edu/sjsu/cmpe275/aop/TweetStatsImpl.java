@@ -68,7 +68,6 @@ public class TweetStatsImpl implements TweetStats {
 		this.tweetsMap.clear();
 	}
     
-	
 	public int getLengthOfLongestTweet() {
 		int sum =0;
 		for(Map.Entry<String, ArrayList<String>> map : this.usersMap.entrySet()){
@@ -81,7 +80,6 @@ public class TweetStatsImpl implements TweetStats {
 		return sum;
 	}
 
-	
 	public String getMostFollowedUser() {
 		TreeMap<String,ArrayList<String>> sortedMap = new TreeMap<String,ArrayList<String>>(this.followsMap);
 		String name=null;
